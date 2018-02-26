@@ -1,0 +1,161 @@
+$topnav-background-color: #3A3A3A;
+$hover-background-color: #777777;
+$active-background-color: darken($topnav-background-color, 5%);;
+
+$topnav-size: 8em;
+.sidebar{
+    border-radius: 0;
+    position: fixed;
+    z-index: 1;
+    top: 4em;   
+    left: $topnav-size; 
+    width: $topnav-size;    
+    margin-left: -$topnav-size;
+    border: none;
+    border-radius: 0;
+    /*overflow-y: auto;
+    overflow-x: hidden;*/
+    background-color: $topnav-background-color;
+    bottom: 3em;    
+    padding-bottom: 40px;
+    -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+    // border-top: 1px solid rgba(255,255,255,0.3);
+    .list-group{
+        a.list-group-item {
+            background-color: $topnav-background-color;
+            border: 0;
+            border-radius: 0;
+            color: #999;
+            text-decoration: none;
+            padding: 1.25rem 0;
+            i, span{
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            
+        }
+        a:hover {
+            background-color: $hover-background-color;
+            color: #fff;
+        }
+        a.router-link-active {
+            background-color: $active-background-color;
+            color: #fff;
+        }
+    }
+    
+} 
+
+.nested-menu {    
+    position: relative;
+    .arrow {
+        display: none;
+        position: absolute;
+        left: $topnav-size;
+        margin: auto;
+        top:0;
+        bottom: 0;
+        //border: 1px solid $topnav-background-color;
+        
+        width: 0; 
+        height: 0; 
+        border-top: 1.5em solid transparent;
+        border-bottom: 1.5em solid transparent;        
+        border-left: 1.5em solid $topnav-background-color;
+
+        &.show{
+            display: block;
+        }
+    }
+
+    .list-group-item {
+        cursor: pointer;
+    }
+    .nested {        
+        position: absolute;
+        top: 0;
+        left: $topnav-size;   
+        width: $topnav-size + 5em;     
+        background-color: $active-background-color;        
+        list-style-type: none;
+        
+    }    
+    & .expand {
+        ul.submenu {
+            display: block;
+            list-style-type: none;
+            overflow-y: auto;
+            height: auto;
+            max-height: 300px;            
+            li {
+                a {
+                    color: #FFF;
+                    padding: 5px 30px;
+                    display: block;  
+                    text-decoration: none;
+                    border-bottom: 1px inset #777777;                      
+                    .texto{
+                        text-indent:-0.6em;                        
+                    }
+                }
+                a:hover{
+                    background-color:  #777777;                    
+                }
+            }
+        }
+    }
+
+    ul.submenu {                        
+        display: none;
+        height: 0;
+        padding: 0;        
+    }
+}
+
+@media screen and (max-width: 992px) {
+    
+    .sidebar {
+        top: 4em;
+        left: 0px;
+        overflow-y: auto;
+        .list-group{
+            .nested-menu {
+                a.list-group-item {
+                    cursor: pointer;
+                    /*background-color: red;*/
+                }
+                .nested {
+                    list-style-type: none;
+                    position: static;
+                    top: auto;
+                    left: auto;
+                    width: auto;
+                }
+                ul.submenu {
+                    display: none;
+                    height: 0;
+                }
+                & .expand {
+                    ul.submenu {
+                        display: block;
+                        list-style-type: none;
+                        height: auto;
+                        li {
+                            a {
+                                color: #FFF;
+                                padding: 10px;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

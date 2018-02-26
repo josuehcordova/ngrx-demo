@@ -1,0 +1,44 @@
+.ce-number-circle {
+    border-radius: 50%;
+    box-sizing: content-box;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding: 8px;
+    background: #fff;
+    border: 10px solid #E84700;
+    color: #E84700;
+    text-align: center;    
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+    &.x2{
+        font-size: 4em;
+        width: 60px;
+        height: 60px;  
+        line-height: 60px;      
+        border-width: 20px;
+
+        &.porcentaje{
+            font-size: 2em;
+        }
+        &.porcentaje[data-view='100']{
+            font-size: 1.7em;
+        }
+    }
+    &.centrado{
+        margin: auto;
+    }
+    &.color-blue{
+        border-color: #2D4A66;
+        color: #2D4A66;
+    }
+    &.color-green{
+        border-color: #79AD6A;
+        color: #79AD6A;
+    }
+    
+}
+
+.color-important-success{
+    color: $brand-primary;
+}

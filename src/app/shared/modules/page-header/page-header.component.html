@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-xl-12">        
+        <ol class="breadcrumb">
+            <ng-template ngFor let-miga [ngForOf]="heading">
+                <ng-template [ngIf]="miga.tipo == 'text'">
+                    <li class="breadcrumb-item">                        
+                        <span> <i *ngIf="miga.icono!=undefined" class="fa {{miga.icono}}"></i>  {{miga.descripcion}}</span>
+                    </li>
+                </ng-template>
+                <ng-template [ngIf]="miga.tipo == 'link'">
+                    <li class="breadcrumb-item">
+                        <a href="Javascript:void(0)" routerLink="{{miga.url}}" preserveQueryParams><i *ngIf="miga.icono!=undefined" class="fa {{miga.icono}}"></i> {{miga.descripcion}}</a>
+                    </li>
+                </ng-template>
+                <ng-template [ngIf]="miga.tipo == 'activo'">
+                    <li class="breadcrumb-item active">
+                        <a href="Javascript:void(0)" routerLink="{{miga.url}}" preserveQueryParams><i *ngIf="miga.icono!=undefined" class="fa {{miga.icono}}"></i> {{miga.descripcion}}</a>
+                    </li>
+                </ng-template>
+            </ng-template>
+            
+            <ng-content select="li[role=combo]"></ng-content>
+
+            <div class="breadcrumb-opciones">
+                <ng-content select="[opcion]"></ng-content>
+            </div>                        
+        </ol>
+
+    </div>    
+</div>

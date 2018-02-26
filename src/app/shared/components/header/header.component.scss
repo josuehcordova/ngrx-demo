@@ -1,0 +1,11 @@
+$topnav-background-color: #ffffff;
+
+.header{
+    z-index: 1;
+    .navbar {        
+        background: $topnav-background-color !important;    
+        box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2);
+        height: 4em;
+        
+    }
+} 

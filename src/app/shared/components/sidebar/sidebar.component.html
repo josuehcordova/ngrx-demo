@@ -1,0 +1,38 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+    <ul class="list-group">
+        <ng-template ngFor let-funcionalidad [ngForOf]="funcionalidadesArray">
+            <ng-template [ngIf]="funcionalidad.funcionalidades.length == 0">
+                <a routerLink="{{funcionalidad.ruta}}" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <i class="{{funcionalidad.icono}}"></i> 
+                    <span>{{funcionalidad.etiqueta | translate}}</span>
+                </a>
+            </ng-template>
+            <ng-template [ngIf]="funcionalidad.funcionalidades.length > 0">
+                <div id="menu{{funcionalidad.funcionalidadId}}" class="nested-menu">
+                    <a class="list-group-item" (click)="onClickMenu(funcionalidad.funcionalidadId)">
+                        <i class="{{funcionalidad.icono}}"></i>
+                        <span> {{funcionalidad.etiqueta | translate}}</span>
+                    </a>                                        
+                    <div class="nested" >
+                        <ul class="submenu" (click)="onClickSubMenu(funcionalidad.funcionalidadId)">
+                            <ng-template ngFor let-funcionalidad2 [ngForOf]="funcionalidad.funcionalidades">
+                                <li>
+                                    <a routerLink="{{funcionalidad2.ruta}}"> 
+                                        <div class="texto">                                               
+                                            <i class="{{funcionalidad2.icono}}"></i> 
+                                            <span>{{funcionalidad2.etiqueta | translate}}</span>                                                                            
+                                        </div>
+                                    </a>
+                                </li>
+                            </ng-template>   
+                        </ul>
+                    </div> 
+                    <div class="arrow">                        
+                    </div>                   
+                </div>
+                
+            </ng-template>
+        </ng-template>
+    </ul>
+    
+</nav>

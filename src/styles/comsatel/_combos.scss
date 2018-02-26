@@ -1,0 +1,31 @@
+body .ce-multiselect-externo{        
+    background-color: #f5f5f5;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    .ui-multiselect-label-container{
+        label{
+            margin: 0px;
+        }
+    } 
+    .ui-multiselect-trigger{
+        .fa{
+            margin-top: .4em;
+        }
+    }
+    .ui-multiselect-panel{
+        .ui-widget-header{
+            display: none;
+        }
+    }
+    .ui-multiselect-items-wrapper{
+        .ui-multiselect-items{
+            .ui-multiselect-item{
+                label{
+                    margin: 0;
+                    vertical-align: -webkit-baseline-middle;
+                }
+            }
+        }
+    }
+}

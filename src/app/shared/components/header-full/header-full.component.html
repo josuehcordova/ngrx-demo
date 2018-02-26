@@ -1,0 +1,28 @@
+<div class="pos-f-t fixed-top header">
+  <nav class="navbar navbar-light navbar-toggleable-md">
+      <button class="navbar-toggler navbar-toggler-right" (click)="toggleSidebar()">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="navbar-brand">
+          <img src="assets/imgs/logo.svg"  width="60%" />    
+      </div>
+      
+      <div class="collapse navbar-collapse">            
+          <ul class="navbar-nav ml-auto mr-5">
+                                                                             
+              <li class="nav-item dropdown" ngbDropdown>
+                  <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
+                      <i class="fa fa-user"></i> {{currentUser.nombre}} <b class="caret"></b>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right">   
+                      <span class="dropdown-item"><b>{{'MODEL.compania.titulo' | translate}}:</b> {{currentUser.compania.nombre}}</span>
+                      <span class="dropdown-item"><b>{{'MODEL.tipoUsuario.titulo' | translate}}:</b> {{currentUser.tipoUsuario.descripcion}}</span>
+                      <hr>
+                      <a class="dropdown-item" [routerLink]="['/login']" (click)="onLoggedout()"><i class="fa fa-fw fa-power-off"></i> Cerrar</a>
+                  </div>
+              </li>
+          </ul>
+      </div>
+  </nav>
+</div>

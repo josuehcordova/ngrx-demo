@@ -1,0 +1,37 @@
+<div class="box">
+  <div id="header">
+      <div id="cont-key">
+          <i class="material-icons key">lock</i>
+      </div>
+      <div id="bottom-head">
+          <h1 id="logintoregister">{{'WEB.cambio-contraseña.cambiar-contraseña' | translate}}</h1>
+      </div>
+  </div> 
+  <form (ngSubmit)="onChangePassword()">
+      <div class="flex-input">
+          <mat-icon>vpn_key</mat-icon>
+          <mat-form-field>
+              <input matInput [(ngModel)]="model.password" name="password" type="password" placeholder="{{'WEB.cambio-contraseña.contraseña' | translate}}">
+          </mat-form-field>
+      </div>
+      
+      <div class="flex-input">
+          <mat-icon>vpn_key</mat-icon>
+          <mat-form-field>
+              <input matInput [(ngModel)]="model.password2" name="password2" type="password" placeholder="{{'WEB.cambio-contraseña.confirmar-contraseña' | translate}}">
+          </mat-form-field>
+      </div>
+      
+      <div class="flex-button">
+          <button mat-raised-button color="primary" >{{'WEB.cambio-contraseña.guardar' | translate}}</button>
+      </div>
+      <!--
+            <ngb-alert [type]="success" (close)="closeAlert(this)">jeidy-u</ngb-alert>
+      -->
+      <div class="msg-box">
+        <ngb-alert [type]="mensaje.type" *ngIf="!mensaje.isClosed" (close)="mensaje.isClosed = true">{{mensaje.message}}</ngb-alert>
+      </div>
+  </form>
+  <div id="footer-box">
+  </div>
+</div>

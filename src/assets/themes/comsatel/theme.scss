@@ -1,0 +1,215 @@
+@import "variables";
+@import "mixins";
+@import "primeng";
+@import "bootstrap";
+
+@font-face {
+	font-family: 'HelveticaNeueLT Std Cn';
+	src: url('fonts/HelveticaNeueLTStd-Cn.eot');
+    src: local('☺'), 
+    url('fonts/HelveticaNeueLTStd-Cn.woff') format('woff'), 
+    url('fonts/HelveticaNeueLTStd-Cn.ttf') format('truetype'), 
+    url('fonts/HelveticaNeueLTStd-Cn.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLT Std Med Cn';
+	src: url('fonts/helvetica-neue-lt-std-87-heavy-condensed.eot');
+    src: local('☺'), 
+    url('fonts/helvetica-neue-lt-std-87-heavy-condensed.woff') format('woff'), 
+    url('fonts/helvetica-neue-lt-std-87-heavy-condensed.ttf') format('truetype'), 
+    url('fonts/helvetica-neue-lt-std-87-heavy-condensed.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+/* PrimeNG */
+.ui-button.ui-button-success.ui-state-default, .ui-splitbutton.ui-button-success .ui-button.ui-state-default {
+  background-color: $brand-success;
+  border-color: $brand-success;
+  color: #ffffff;
+}
+
+.ui-button.ui-button-success {
+  &:enabled:hover { 
+    background-color: darken($brand-success, 10%);
+    border-color: darken($brand-success, 12%);
+  }
+  &:focus{    
+    box-shadow: 0 0 0 2px rgba($brand-success, .5);
+  }
+}
+
+.ui-splitbutton.ui-button-success .ui-button {
+  &:enabled:hover {
+    background-color: darken($brand-success, 10%);
+    border-color: darken($brand-success, 12%);
+  }
+  &:focus{    
+    box-shadow: 0 0 0 2px rgba($brand-success, .5);
+  }
+}
+
+.ui-button.ui-button-success:enabled:active, .ui-splitbutton.ui-button-success .ui-button:enabled:active {
+  background-color: $brand-success;
+  border-color: $brand-success;
+}
+
+/* Info */
+
+.ui-button.ui-button-info.ui-state-default, .ui-splitbutton.ui-button-info .ui-button.ui-state-default {
+  background-color: $brand-info;
+  border-color: $brand-info;
+  color: #ffffff;
+}
+
+.ui-button.ui-button-info {
+  &:enabled:hover {
+    background-color: darken($brand-info, 10%);
+    border-color: darken($brand-info, 12%);
+  }
+  &:focus{
+    box-shadow: 0 0 0 2px rgba($brand-info, .5);
+  }
+}
+
+.ui-splitbutton.ui-button-info .ui-button {
+  &:enabled:hover {
+    background-color: darken($brand-info, 10%);
+    border-color: darken($brand-info, 12%);
+  }
+  &:focus{    
+    box-shadow: 0 0 0 2px rgba($brand-info, .5);
+  }
+}
+
+.ui-button.ui-button-info:enabled:active, .ui-splitbutton.ui-button-info .ui-button:enabled:active {
+  background-color: $brand-info;
+  border-color: $brand-info;
+}
+
+/* Warning */
+
+.ui-button.ui-button-warning.ui-state-default, .ui-splitbutton.ui-button-warning .ui-button.ui-state-default {
+  background-color: $brand-warning;
+  border-color: $brand-warning;
+  color: #ffffff;
+}
+
+.ui-button.ui-button-warning {
+  &:enabled:hover {
+    background-color: darken($brand-warning, 10%);
+    border-color: darken($brand-warning, 12%);
+  }
+  &:focus{
+    box-shadow: 0 0 0 2px rgba($brand-warning, .5);
+  }
+}
+
+.ui-splitbutton.ui-button-warning .ui-button {
+  &:enabled:hover {
+    background-color: darken($brand-warning, 10%);
+    border-color: darken($brand-warning, 12%);
+  }
+  &:focus{
+    box-shadow: 0 0 0 2px rgba($brand-warning, .5);
+  }
+}
+
+.ui-button.ui-button-warning:enabled:active, .ui-splitbutton.ui-button-warning .ui-button:enabled:active {
+  background-color: $brand-warning;
+  border-color: $brand-warning;
+}
+
+/* Danger */
+
+.ui-button.ui-button-danger.ui-state-default, .ui-splitbutton.ui-button-danger .ui-button.ui-state-default {
+  background-color: $brand-danger;
+  border-color: $brand-danger;
+  color: #ffffff;
+}
+
+.ui-button.ui-button-danger {
+  &:enabled:hover {
+    background-color: darken($brand-danger, 10%);
+    border-color: darken($brand-danger, 12%);
+  }
+  &:focus{
+    box-shadow: 0 0 0 2px rgba($brand-danger, .5);
+  }
+}
+
+.ui-splitbutton.ui-button-danger .ui-button {
+  &:enabled:hover {
+    background-color: darken($brand-danger, 10%);
+    border-color: darken($brand-danger, 12%);
+  }
+  &:focus{
+    box-shadow: 0 0 0 2px rgba($brand-danger, .5);
+  }
+}
+.ui-splitbutton .ui-button{
+  padding: 0.2em 0.8em;
+}
+
+.ui-button.ui-button-danger:enabled:active, .ui-splitbutton.ui-button-danger .ui-button:enabled:active {
+  background-color: $brand-danger;
+  border-color: $brand-danger;
+}
+
+/* Filtros en PrimeNG con resizable */
+.ui-datatable-resizable {
+  .ui-resizable-column{
+    overflow: visible !important;
+    p-calendar{
+      /*width: 100%;*/
+    }
+  }
+
+  .ui-column-filter.ui-multiselect{
+    color: #373a3c;
+    padding: 0;
+    .ui-multiselect-panel{
+      .ui-multiselect-item{
+        label{
+          margin: 0;
+          vertical-align: sub;
+          vertical-align: -webkit-baseline-middle;          
+        }
+      }
+    }
+  }
+
+  .ui-column-filter{
+    margin: 0;
+    .ui-multiselect-label{
+      margin: 0;
+    }
+    .ui-multiselect-trigger .fa-caret-down{
+      margin-top: .4em;
+    }
+    &.ui-dropdown{
+      width: 100%;    
+    }
+  } 
+
+  .ui-inputgroup{
+    .ui-inputtext{
+      width: 100%;
+      line-height: 1.5em;
+      text-align: center;
+      padding: .25em .25em .25em .25em;
+    }
+    .btn{
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;      
+      padding: 1px 6px;      
+    }
+  }
+  
+
+}

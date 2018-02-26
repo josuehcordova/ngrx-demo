@@ -1,0 +1,16 @@
+.main-container{    
+    padding-top: .5em;
+    -ms-overflow-x: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;        
+    position: absolute;  
+    top: 4em;
+    left: 8em;
+    right: 0;
+    bottom: 3em;
+}
+@media screen and (max-width: 992px) {
+    .main-container {
+        left: 0px !important;
+    }
+}

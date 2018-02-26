@@ -1,0 +1,122 @@
+<app-page-header [heading]="[
+{
+  icono:'fa fa-lock',
+  descripcion:'WEB.seguridad.titulo' | translate,
+  tipo:'text'
+},
+{                                
+  descripcion:'WEB.seguridad.usuario.titulo' | translate,
+  tipo:'text'
+}
+]">
+</app-page-header>
+
+<p-confirmDialog header="{{'COMMON.boton.confirmar' | translate}}" 
+                 key="eliminar-usuario" icon="fa fa-question-circle"
+                acceptLabel="{{'COMMON.boton.si' | translate}}" 
+                rejectLabel="{{'COMMON.boton.no' | translate}}" width="425">
+</p-confirmDialog>
+<p-growl [value]="msgs"></p-growl>
+
+<section class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-md-3">
+    <p-panel styleClass="ce-filtro" [toggleable]="true">
+      <p-header>
+        <span class="fa fa-fw fa-filter"></span> {{'COMMON.boton.filtros' | translate}}
+      </p-header>
+      <form [formGroup]="formFiltros">
+        <div class="ui-g">
+          <div class="ui-g-12 ui-md-6">
+            <span>{{'MODEL.usuario.titulo' | translate}}</span>
+          </div>
+          <div class="ui-g-12 ui-md-6">
+            <input pInputText type="text" formControlName="usuario" class="form-control">
+          </div>
+
+          <div class="ui-g-12 ui-md-6">
+            <span>{{'MODEL.usuario.nombre' | translate}}</span>
+          </div>
+          <div class="ui-g-12 ui-md-6">
+            <input pInputText type="text" formControlName="nombre" class="form-control">
+          </div>
+
+          <div class="ui-g-12 ui-md-6">
+            <span>{{'MODEL.perfil.titulo' | translate}}</span>
+          </div>
+          <div class="ui-g-12 ui-md-6">            
+            <p-dropdown name="ddperfil" [options]="listPerfil" formControlName="perfilId" [autoWidth]="false">
+              </p-dropdown>
+          </div>
+
+          <div class="ui-g-12">
+              <div *ngIf="formFiltros.controls.usuario.errors && formFiltros.controls.usuario.dirty">
+                  <div *ngIf="formFiltros.controls.usuario.errors.pattern" class="alert alert-danger">
+                    {{'COMMON.validaciones.letras-numeros' | translate}}
+                  </div>
+                  <div *ngIf="formFiltros.controls.usuario.errors.maxlength" class="alert alert-danger">
+                    {{'WEB.seguridad.usuario.validaciones.usuario-longitud' | translate}}
+                  </div>
+              </div>
+
+              <div *ngIf="formFiltros.controls.nombre.errors && formFiltros.controls.nombre.dirty">
+                  <div *ngIf="formFiltros.controls.nombre.errors.pattern" class="alert alert-danger">
+                    {{'COMMON.validaciones.letras-numeros-espacios' | translate}}
+                  </div>
+                  <div *ngIf="formFiltros.controls.nombre.errors.maxlength" class="alert alert-danger">
+                    {{'WEB.seguridad.usuario.validaciones.nombre-longitud' | translate}}
+                  </div>
+              </div>
+          </div>
+
+          <div class="ui-g-12 footer">
+            <button class="btn btn-primary" (click)="onClickFiltrar()" [disabled]="!formFiltros.valid">    
+              <span><i class="fa fa-filter"></i> {{'COMMON.boton.filtrar' | translate}}</span>
+            </button>
+
+            <button class="btn btn-danger" (click)="onClickLimpiar()">    
+              <span> <i class="fa fa-eraser" aria-hidden="true"></i> {{'COMMON.boton.limpiar' | translate}} </span>                  
+            </button>
+          </div>
+        </div>
+      </form>
+    </p-panel>
+  </div>
+
+  <div class="ui-g-12 ui-md-9">
+    <div class="ui-g ce-listado">
+      <div class="ui-g-12">
+        <p-dataTable [value]="listado" [rows]="10" [paginator]="true" [pageLinks]="3" [responsive]="true" [tableStyle]="{'table-layout':'auto'}" resizableColumns="true">
+
+          <p-column field="usuario" header="{{'MODEL.usuario.titulo' | translate}}" [sortable]="true"></p-column>
+
+          <p-column field="nombre" header="{{'MODEL.usuario.nombre' | translate}}" [sortable]="true"></p-column>
+
+          <p-column field="correo" header="{{'MODEL.usuario.correo' | translate}}" [sortable]="true"></p-column>
+          
+          <p-column styleClass="col-acciones" header="{{'COMMON.boton.opciones' | translate}}" [style]="{'width':'150px'}">
+            <ng-template let-usuario="rowData" pTemplate="body">
+              <p-splitButton label="{{'COMMON.boton.modificar' | translate}}" (onClick)="onClickModificar(usuario)" (onDropdownClick)="onClickOpciones(usuario)" [model]="opciones"></p-splitButton>
+            </ng-template>
+          </p-column>
+
+        </p-dataTable>
+      </div>
+      <div class="ui-g-12 footer">
+        
+        <button type="button" class="btn btn-primary" (click)="onClickNuevo()">
+          <span><i class="fa fa-fw fa-plus"></i>{{'COMMON.boton.nuevo' | translate}}</span>
+        </button>
+        <button type="button" class="btn btn-info" (click)="exportarComoXLS()">
+          <span><i class="fa fa-fw fa-download"></i>{{'COMMON.boton.exportar' | translate}}</span>
+        </button>
+        <button type="button" class="btn btn-info" (click)="onClickImportar()">
+            <span><i class="fa fa-fw fa-download"></i>{{'COMMON.boton.importar' | translate}}</span>
+        </button>
+                 
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<usuario-importar></usuario-importar>

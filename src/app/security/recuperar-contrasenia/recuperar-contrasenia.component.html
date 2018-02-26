@@ -1,0 +1,29 @@
+<div class="box">
+  <div id="header">
+      <div id="cont-send">
+          <i class="material-icons send">send</i>
+      </div>
+      <div id="bottom-head">
+          <h1 id="logintoregister">{{'WEB.solicitud-cambio-contraseña.solicitud-cambio-contraseña' | translate}}</h1>
+      </div>
+  </div> 
+  <form (ngSubmit)="onEnvioin()">
+      <div class="flex-input">
+          <mat-icon>account_box</mat-icon>
+          <mat-form-field>
+              <input matInput name="username" [(ngModel)]="model.username" placeholder="{{'WEB.solicitud-cambio-contraseña.nombre-usuario' | translate}}" >
+          </mat-form-field>
+      </div>      
+      <div class="flex-button">
+          <button mat-raised-button  color="primary" class="button2">{{'WEB.solicitud-cambio-contraseña.enviar' | translate}}</button>
+      </div>
+      <div class="msg-box">
+        <ngb-alert [type]="mensaje.type" *ngIf="!mensaje.isClosed" (close)="mensaje.isClosed = true">{{mensaje.message}}</ngb-alert>
+      </div>
+  </form>
+  <div id="footer-box">
+      <p class="footer-text">
+        {{'WEB.solicitud-cambio-contraseña.revisar-correo' | translate}}
+      </p>
+  </div>
+</div>

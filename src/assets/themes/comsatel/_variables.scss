@@ -1,0 +1,25 @@
+//Colores
+$white:  #fff !default;
+$black:  #000 !default;
+
+// Create grayscale
+$gray-shaft:      #3A3A3A !default;
+$red-monza:       #DA0209 !default;
+$red-trinidad:    #E84700 !default;
+$green-cucumber:  #79AD6A !default;
+$blue-marine:     #2D4A66 !default;
+$yellow-gold:     #F7C800 !default;
+
+$light-gray : #E4E4E4;
+$very-light-gray : #EDEFF0;
+$gray95 : #F2F2F2;
+$gray89 : #e3e3e3;
+
+// Reassign color vars to semantic color scheme
+$brand-primary:       $red-monza !default;
+$brand-success:       $green-cucumber !default;
+$brand-info:          $blue-marine !default;
+$brand-warning:       $yellow-gold !default;
+$brand-danger:        $red-trinidad !default;
+
+$principal-color:   $blue-marine !default;

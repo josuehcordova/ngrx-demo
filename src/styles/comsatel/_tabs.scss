@@ -1,0 +1,95 @@
+
+body .ui-tabview.ce-tabview-simple { 
+    
+    &.ui-tabview-top .ui-tabview-nav, &.ui-tabview-bottom .ui-tabview-nav, &.ui-tabview-left .ui-tabview-nav, &.ui-tabview-right .ui-tabview-nav {
+        background-color: $blue-marine;    
+        border: none;               
+    }
+    &.ui-tabview-top .ui-tabview-nav li, &.ui-tabview-bottom .ui-tabview-nav li, &.ui-tabview-left .ui-tabview-nav li, &.ui-tabview-right .ui-tabview-nav li {
+        background-color: $blue-marine;       
+        border: none;     
+    }
+    &.ui-tabview-top .ui-tabview-nav li.ui-state-default a, &.ui-tabview-bottom .ui-tabview-nav li.ui-state-default a, &.ui-tabview-left .ui-tabview-nav li.ui-state-default a, &.ui-tabview-right .ui-tabview-nav li.ui-state-default a{
+        color: $white;
+    }
+    &.ui-tabview-top .ui-tabview-nav li.ui-state-active, &.ui-tabview-bottom .ui-tabview-nav li.ui-state-active, &.ui-tabview-left .ui-tabview-nav li.ui-state-active, &.ui-tabview-right .ui-tabview-nav li.ui-state-active {
+        background-color: $blue-active ;
+        /*border-color: $blue-active;*/
+    }
+    &.ui-tabview-top .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover, &.ui-tabview-bottom .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover, &.ui-tabview-left .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover, &.ui-tabview-right .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover {
+        border-color: transparent;
+        border-bottom: none;
+        background-color: $blue-active;      
+    }
+
+    &.ui-tabview-top .ui-tabview-nav li {
+        margin: 0;
+        -moz-border-radius-topleft: 0;
+        -webkit-border-top-left-radius: 0;
+        border-top-left-radius: 0;
+        -moz-border-radius-topright: 0;
+        -webkit-border-top-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+    &.ui-tabview-left .ui-tabview-nav, &.ui-tabview-right .ui-tabview-nav {
+        border-bottom: none;
+    }
+    &.ui-tabview-left .ui-tabview-nav li, &.ui-tabview-right .ui-tabview-nav li {
+        border: 1px solid transparent;
+        width: 100%;
+    }
+    &.ui-tabview-left .ui-tabview-nav li:hover, &.ui-tabview-right .ui-tabview-nav li:hover {
+        border: 1px solid #dedede;
+    }
+    &.ui-tabview-left .ui-tabview-nav li.ui-state-active, &.ui-tabview-right .ui-tabview-nav li.ui-state-active {
+        border-color: $blue-marine;
+        border-bottom: none;
+    }
+    &.ui-tabview-bottom .ui-tabview-nav {
+        border-bottom: none;
+        border-top: 1px solid #cccccc;
+        li {
+            -moz-border-radius-bottomleft: 0;
+            -webkit-border-bottom-left-radius: 0;
+            border-bottom-left-radius: 0;
+            -moz-border-radius-bottomright: 0;
+            -webkit-border-bottom-right-radius: 0;
+            border-bottom-right-radius: 0;
+            margin-right: 0;
+            &:hover {
+                border-bottom: 1px solid #cccccc;
+                border-top-color: transparent;
+            }
+        }
+    }
+    &.ui-tabview-left .ui-tabview-nav {
+        border-right: 1px solid #cccccc;
+        li {
+            -moz-border-radius-topleft: 0;
+            -webkit-border-top-left-radius: 0;
+            border-top-left-radius: 0;
+            -moz-border-radius-bottomleft: 0;
+            -webkit-border-bottom-left-radius: 0;
+            border-bottom-left-radius: 0;
+            &:hover {
+                border-right: none;
+            }
+        }
+    }
+    &.ui-tabview-right .ui-tabview-nav {
+        border-left: 1px solid #cccccc;
+        height: 9.375em;
+        li {
+            -moz-border-radius-topright: 0;
+            -webkit-border-top-right-radius: 0;
+            border-top-right-radius: 0;
+            -moz-border-radius-bottomright: 0;
+            -webkit-border-bottom-right-radius: 0;
+            border-bottom-right-radius: 0;
+            &:hover {
+                border-left-color: transparent;
+            }
+        }
+    }
+}
+/* #2D4A66 */

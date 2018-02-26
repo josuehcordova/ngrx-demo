@@ -1,0 +1,126 @@
+@import "variables";
+@import "mixins";
+@import "buttons";
+@import "tooltips";
+@import "tabs";
+@import "combos";
+@import "formularios";
+@import "formas";
+
+//Header (Miga de Pan)
+.breadcrumb {
+  margin: 0px;
+}
+
+//Para campos Requeridos
+.required:after { content:" *"; color : red}
+
+//Espaciado
+.top-buffer { 
+    margin-top:20px; 
+}
+//Centrado
+.center-all {
+    text-align: center;
+    width: 100%;
+}
+//Columna split-button
+.col-acciones{
+  text-align: center;
+  overflow: visible !important;
+} 
+
+.ce-fieldset{
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+  legend{
+      width: auto;
+      font-size: 1em;
+  }
+}
+
+/*PRIME NG - DATALIST */
+.ce-data-list{
+  background-color: #F4F4F4;
+  .titulo{
+      font-size: 1.2em;
+      color: #737373;
+      padding-top: 1em;
+      padding-bottom: 0;
+  }
+  .sub-titulo{
+      font-weight: bold;
+  }
+  .nopad {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+    
+}
+
+/*PRIME NG -  DATATABLE*/
+.ce-data-table{
+  .ui-datatable-tfoot{      
+      tr{
+        td{
+          text-align: justify;
+          background: #eeeeee !important;
+        }
+        
+      }
+  }
+}
+
+/*PRIME NG - DIALOG*/
+.ce-dialog-content{    
+  .ui-dialog-content{
+    max-width: 1000px;
+    max-height : 700px;
+    overflow: auto;
+  }
+  .ui-dialog-footer{
+    text-align: center !important;
+  }
+}
+
+/**
+ * Revisar estilos 
+ */
+
+/*ALINEACION DE LOS LABELS*/
+.col-form-label {
+    padding-top: calc(.7rem - 1px * 2);
+    padding-bottom: calc(.7rem - 1px * 2);
+    margin-bottom: 0;
+}
+
+/*ALINEACION DE LOS CHECKBOX DE PRIME*/
+.ce-ng-check{
+  line-height: 2.2;
+}
+.ce-ng-check>label{
+  margin: 0;
+}
+
+/*TAMAÑO DE LOS PCALENDAR DE PRIME*/
+.ce-ng-pcalendar>span>input{
+  width: 9.7em;
+}
+
+
+/*PRIME NG - DATATABLE*/
+.col-icon {//Seleccion en las tablas
+    width: 47px;
+    text-align: center;
+}
+
+.col-button {//Boton de Acciones
+    text-align: center;
+}
+
+body{
+  .ui-state-active, .ui-state-highlight .btn-link{
+    color: white;
+  }
+}

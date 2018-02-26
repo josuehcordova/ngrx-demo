@@ -1,0 +1,225 @@
+{
+  "WEB": {
+    "sesion":{
+      "inicio-sesion" : "Inicio de Sesión",
+      "nombre-usuario" : "Nombre de Usuario",
+      "contraseña" : "Contraseña",
+      "ingresar" : "Ingresar",
+      "olvidaste-contraseña" : "¿Olvidaste la Contraseña?"
+    },
+    "cambio-contraseña": {
+      "cambiar-contraseña": "Cambiar Contraseña",
+      "contraseña": "Contraseña",
+      "confirmar-contraseña": "Confirmar Contraseña",
+      "guardar": "Guardar",
+      "mensajes":{
+        "cambio-satisfactorio":"Contraseña cambiada satisfactoriamente",
+        "claves-no-coinciden": "Las contraseñas ingresadas no coinciden"
+       }
+    },
+    "solicitud-cambio-contraseña":{
+      "solicitud-cambio-contraseña" : "Solicitar Cambio de Contraseña",
+      "nombre-usuario" : "Nombre de Usuario",
+      "enviar" : "Enviar",
+      "revisar-correo" : "Revisar su correo",
+      "mensajes":{
+        "solicitud-satisfactoria":"Solicitud de cambio de contraseña enviada",
+        "usuario-no-existe":"Usuario no existe",
+        "usuario-vacio":"El campo usuario esta vacío"
+      }
+    },
+    "seguridad":{
+      "titulo" : "Seguridad",
+      "perfil" :{
+        "titulo": "Perfil"
+      },
+      "usuario":{
+        "titulo": "Usuario",
+        "validaciones":{          
+          "usuario-longitud":"Longitud máxima 50 caracteres para el usuario",
+          "usuario-requerido" : "Usuario es un campo requerido" ,
+          "usuario-espacios":"No ingrese espacios en el usuario",
+          "nombre-longitud":"Longitud máxima 50 caracteres para el nombre",
+          "correo-invalido":"Ingrese correo válido",
+          "contrasenha-requerido" : "Contraseña es un campo requerido" ,
+          "perfiles-requerido":"Seleccione al menos 1 perfil",
+          "contrasenha-longitud":"Longitud máxima 50 caracteres para la contraseña"
+        },
+        "importar":{
+          "titulo":"Importar Usuarios",
+          "archivo":"Archivo",
+          "resultado":"Resultado"
+        },
+        "listado":{
+          "archivo":"usuarios",
+          "mensaje-eliminar":"¿Está usted seguro de eliminar el Usuario?",
+          "mensaje-eliminar-invalido":"No se puede eliminar el usuario actualmente logueado"
+        },
+        "nuevo":{
+          "titulo": "Nuevo Usuario"
+        },
+        "modifica":{
+          "titulo": "Modifica Usuario"
+        },
+        "detalle":{
+          "titulo":"Datos de Usuario"
+        }
+      },
+      "accesos":{
+        "archivo": "accesos",
+        "titulo": "Accesos",
+        "filtro-fecha-inicio": "Fecha Inicio",
+        "filtro-fecha-fin": "Fecha Fin",
+        "filtro-compania": "Compañía",
+        "filtro-usuario": "Usuario",
+        "filtro-tipo-acceso": "Tipo Acceso",
+        "campo-fecha-hora-inicio" : "Fecha Hora Inicio",
+        "campo-fecha-hora-fin" : "Fecha Hora Fin",
+        "campo-compania-codigo" : "Código de Compañía",
+        "campo-compania-nombre" : "Nombre de Compañía",
+        "campo-usuario-nombre" : "Nombre de Usuario",
+        "campo-usuario-usuario" : "Usuario",
+        "campo-tipo-acceso" : "Tipo de Acceso",
+        "campo-ip" : "IP",
+        "campo-imei" : "IMEI"
+      },
+      "reporte-actividad":{
+        "archivo": "accesos",
+        "titulo": "Reporte de Actividad",
+        "filtro-fecha-inicio": "Fecha Inicio",
+        "filtro-fecha-fin": "Fecha Fin",
+        "filtro-compania": "Compañía",
+        "campo-compania-codigo" : "Código de Compañía",
+        "campo-compania-nombre" : "Nombre de Compañía",
+        "campo-usuario-nombre" : "Nombre de Usuario",
+        "campo-usuario-usuario" : "Usuario",
+        "campo-tiempo-promedio-actividad" : "Tiempo Promedio Actividad (m)",
+        "grafico-tiempo-promedio-actividad-por-usuario" : "Tiempo Promedio Actividad (m) x Usuario"
+      },
+      "reporte-funciones-usadas":{
+        "archivo": "funciones-mas-usadas",
+        "titulo": "Reporte de Funciones más Usadas",
+        "filtro-fecha-inicio": "Fecha Inicio",
+        "filtro-fecha-fin": "Fecha Fin",
+        "filtro-compania": "Compañía",
+        "campo-funcionalidad" : "Funcionalidad",
+        "campo-cantidad-uso" : "Cantidad de Uso",
+        "grafico-titulo" : "10 Funcionalidades más Usadas"
+      },
+      "supervisor":{
+        "titulo":"Supervisor",
+        "listado":{
+          "archivo":"supervisores",
+          "mensaje-eliminar":"¿Está usted seguro de eliminar el Supervisor?",
+          "filtros":{
+            "nombre":"Nombre de Usuario",
+            "usuario":"Usuario"
+          }
+        },
+        "nuevo":{
+          "titulo":"Nuevo Supervisor",
+          "titulo2":"Supervisor" 
+        },
+        "modifica":{
+          "titulo":"Modifica Supervisor"
+        },
+        "validaciones":{
+          "usuario-requerido":"Usuario es requerido"
+        }
+      }
+    }
+  },
+  "COMMON": {
+    "boton" : {
+      "agregar" : "Agregar",
+      "acciones" : "Acciones",
+      "buscar" : "Buscar",
+      "cancelar" : "Cancelar",
+      "cobrar" : "Cobrar",
+      "confirmar" : "Confirmar",
+      "consolidar" : "Consolidar",
+      "detalle" : "Detalle",
+      "eliminar" : "Eliminar",
+      "exportar" : "Exportar",
+      "filtrar" : "Filtrar",
+      "filtros" : "Filtros",
+      "guardar" : "Guardar",
+      "iniciar-sesion" : "Iniciar Sesión",
+      "importar" : "Importar",
+      "modificar" : "Modificar",      
+      "nuevo" : "Nuevo",      
+      "no" : "No",
+      "limpiar" : "Limpiar",                        
+      "opciones" : "Opciones",
+      "ordenar" : "Ordenar",
+      "regresar" : "Regresar",      
+      "subir" : "Subir",                                        
+      "refrescar" : "Refrescar",
+      "seleccionar" : "Seleccionar",
+      "cerrar" : "Cerrar",
+      "si" : "Sí",
+      "salir" : "Salir",
+      "todos" : "Todos"
+      
+    },
+    "combo" : {
+      "seleccion-item" : "Seleccione un Item",
+      "seleccion-ninguno":"Ninguno"
+    },
+    "prime" : {
+      "calendar": {
+        "firstDayOfWeek": 1,
+        "dayNames": [ "domingo","lunes","martes","miércoles","jueves","viernes","sábado" ],
+        "dayNamesShort": [ "dom","lun","mar","mié","jue","vie","sáb" ],
+        "dayNamesMin": [ "D","L","M","X","J","V","S" ],
+        "monthNames": [ "enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre" ],
+        "monthNamesShort": [ "ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic" ]
+      }
+    },
+    "constantes":{
+      "tipo-tarea":{
+        "entrega-value":"E",
+        "entrega-label":"Entrega",
+        "recojo-value":"R",
+        "recojo-label":"Recojo"
+      }
+    },
+    "validaciones":{
+      "fInicioMenorActual":"Fecha Inicio no puede ser menor a la fecha Actual",
+      "fInicioMayorFin":"Fecha Inicio no puede ser mayor a la Fecha Fin",            
+      "espacios-codigo":"No ingrese espacios en el código",
+      "longitud-codigo":"Longitud máxima 20 caracteres para el código",
+      "requerido-codigo" : "Código es un campo requerido" ,
+      "repetido-codigo":"El Código ingresado ya existe en la lista",
+      "requerido-nombre" : "Nombre es un campo requerido",
+      "longitud-nombre":"Longitud máxima 50 caracteres para el nombre",
+      "letras-numeros":"Solo se deben ingresar letras y numeros",
+      "letras-numeros-espacios":"Solo se deben ingresar letras, numeros y espacios"
+    },
+    "mensajes":{
+      "error":"Ocurrió un error interno.",      
+      "error-conexion":"Error de conexión con el servicio",
+      "error-envio":"Error en el envío de parámetros",
+      "error-no-data" : "No existe información para los criterios indicados",
+      "error-eliminar-datos-asociados" : "No se puede eliminar, porque tiene datos asociados."
+    },
+    "etiquetas":{
+      "horas":"horas",
+      "metros":"metros",
+      "minutos":"minutos",
+      "vacio":"",
+      "no-disponible":"No Disponible"
+    },
+    "general":{
+      "vacio" : "",
+      "numero" : "Número"
+    }
+  },
+  "MODEL":{
+    "estadoViaje":{
+      "titulo":"Estado del Viaje",
+      "estado":"Estado"
+    }
+  }
+}
+

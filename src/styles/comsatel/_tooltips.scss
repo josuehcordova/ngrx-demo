@@ -1,0 +1,19 @@
+.tooltip{
+    .tooltip-inner{
+        padding: 1em;
+        background-color: $white;
+        color: $black;
+        border: 1px solid $light-gray; 
+        text-align: justify;                
+        >span.close-tooltip{
+            position: absolute;
+            opacity: .5;
+            top: 0.5em;
+            right: 0.5em;
+            cursor: pointer;        
+        }
+    }
+    &.show {
+        opacity: 1;
+    }
+}

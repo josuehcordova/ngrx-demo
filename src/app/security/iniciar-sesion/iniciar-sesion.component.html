@@ -1,0 +1,78 @@
+<div class="box">
+  <div id="header">
+      <div id="cont-lock">
+          <i class="material-icons lock">lock</i>
+      </div>
+      <div id="bottom-head">
+          <h1 id="logintoregister">{{'WEB.sesion.inicio-sesion' | translate}}</h1>
+      </div>
+  </div> 
+  <form (ngSubmit)="onLoggedin()">
+      <div class="flex-input">
+          <mat-icon>account_box</mat-icon>
+          <mat-form-field>
+              <input matInput name="username" [(ngModel)]="model.username" placeholder="{{'WEB.sesion.nombre-usuario' | translate}}">
+          </mat-form-field>
+      </div>
+      
+      <div class="flex-input">
+          <mat-icon>lock</mat-icon>
+          <mat-form-field>
+              <input matInput name="password" [(ngModel)]="model.password" type="password" placeholder="{{'WEB.sesion.contraseña' | translate}}">
+          </mat-form-field>
+      </div>
+      
+      <div class="flex-button">
+          <button mat-raised-button color="primary">{{'WEB.sesion.ingresar' | translate}}</button>
+      </div>
+  </form>
+  <div id="footer-box">
+      <p class="footer-text">
+          <a  [routerLink]="['recuperar-contrasenia']">{{'WEB.sesion.olvidaste-contraseña' | translate}}</a>
+      </p>
+  </div>
+</div>
+
+
+<!--
+<app-header></app-header>
+
+<div class="main container-fluid">
+  <div class="row">            
+      <div class="form-content col-md-4 offset-md-8 px-5">
+          <div class="row">
+              <div class="col text-center">
+                  <img src="assets/images/login-logo.svg" width="150px" class="user-avatar" />
+              </div>
+          </div>
+          
+          <div class="row">
+              <div class="col">
+                  <form role="form" (ngSubmit)="onLoggedin()" >
+              
+                      <div class="form-group">
+                          <label for="username">Nombre de usuario:</label>
+                          <input type="text" name="username" [(ngModel)]="model.username" class="form-control login-input" placeholder="User">
+                      </div>
+
+                      <div class="form-group">
+                          <label for="password"> Contraseña:</label>
+                          <input type="password" name="password" [(ngModel)]="model.password" class="form-control login-input" placeholder="xxxxxxxx">
+                      </div>
+
+                      <button [disabled]="loading" class="btn btn-primary login-btn"> {{'COMMON.boton.iniciar-sesion' | translate}}</button>  
+                                                                              
+                  </form>  
+              </div>
+          </div>    
+          <div class="row">
+              <div class="col">
+                  <p-messages [(value)]="msgs"></p-messages>
+              </div>
+          </div>                                                        
+      </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+-->
