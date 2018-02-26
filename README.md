@@ -1,6 +1,6 @@
-# Seguridad Web en Angular 5 y Bootstrap 4
+# Demo de ngrx
 
-Aplicación web del Modulo de Seguridad
+
 
 ### Introducción
 
@@ -9,13 +9,8 @@ Aplicación web del Modulo de Seguridad
 
 In order to start the project use:
 ```bash
-$ git clone git@gitlab.com:comsatel-code/seguridad-web/seguridad-web.git
-$ cd seguridad-web
+$ git clone https://github.com/josuehcordova/ngrx-demo.git 
 # instalar las dependencias del proyecto
 $ npm install
 # iniciar el proyecto en modo local privado
 $ ng serve
-# iniciar el proyecto en modo lan
-$ npm run lan
-# iniciar el proyecto en modo produccoón
-$ npm run prod
